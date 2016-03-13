@@ -35,8 +35,13 @@ def getMyNumber(profile):
     return profile["TWILIO_PHONE_NUMBER"]
 
 def sendSMS(mic, client, to_phone_number, from_phone_number):
-    
-    client.messages.create(to=to_phone_number, from_=from_phone_number, body="Hello There!")
+
+    mic.say("What would you like to say?")
+
+    #make it all lowercase so it doesn't seem like we're shouting
+    message = mic.activeListen().lower()    
+
+    client.messages.create(to=to_phone_number, from_=from_phone_number, body=message)
 
 
 
