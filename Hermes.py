@@ -16,17 +16,15 @@ def handle(text, mic, profile):
     client = TwilioRestClient(account_sid, auth_token);
 
 
-    #mic.say("Who would you like to send it to?")
+    mic.say("Who would you like to send it to?")
 
-    #contact = mic.activeListen()
-    contact = "MOM"
+    contact = mic.activeListen()
+    
     contact_number = getContactNumber(contact, profile)    
     my_number = getMyNumber(profile)
    
     sendSMS(mic, client, contact_number, my_number)
 
-    message = "Sending text message"
-    mic.say(message)
 
 def getContactNumber(contact, profile):
     return profile["TWILIO_CONTACTS"][contact]
@@ -43,7 +41,7 @@ def sendSMS(mic, client, to_phone_number, from_phone_number):
 
     client.messages.create(to=to_phone_number, from_=from_phone_number, body=message)
 
-
+    mic.say("Text message sent")
 
 
 
