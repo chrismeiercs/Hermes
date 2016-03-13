@@ -8,7 +8,7 @@ sudo pip install twilio
 ```
 
 Add your Account SID, Auth Token, and Twilio phone number to your profile.yml
-``yml
+```yml
 TWILIO_PHONE_NUMBER: twilio phone number as a string
 TWILIO_ACCOUNT_SID: account sid
 TWILIO_AUTH_TOKEN: auth token
