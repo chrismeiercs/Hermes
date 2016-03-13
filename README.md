@@ -24,13 +24,8 @@ To activate Hermes, your sentence must include the phrase "send text message"
 
 To send a text message:
 YOU: Send text message
-
 JASPER: Who would you like to send it to?
-
 YOU: Mom
-
 JASPER: What would you like to say?
-
 YOU: Happy Mothers Day!
-
 JASPER: Text message sent
